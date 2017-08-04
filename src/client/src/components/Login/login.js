@@ -26,7 +26,6 @@ export default class Login extends React.Component {
       </div>
     );
   }
-
   handleClick = (e) => {
     e.preventDefault();
   //  this.props.loginReducer()
@@ -37,7 +36,6 @@ export default class Login extends React.Component {
     //   this.login()
     // }
     // dispatch(action)
-    console.info('Login handleClick => props: ', this.props);
     this.props.acLogin({
       username: this.refs.username.value, 
       password: this.refs.password.value

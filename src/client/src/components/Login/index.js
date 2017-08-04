@@ -10,7 +10,7 @@ import * as loginAction from '../../actions/loginAction';
 import Login from './login';
 
 const mapStateToProps = (state) => ({
-  ...state
+ ...state
   // ngocdam: state.rdLoginReducer,
   // product: ngocdam: state.product
 });
