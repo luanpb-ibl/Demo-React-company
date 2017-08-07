@@ -9,28 +9,14 @@ export default class Home extends React.Component {
    data:[]
   }
   }
-//get data with fetch
-loadData() {
-    const url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Freactjsnews.com%2Ffeed.xml';
-    fetch(url)
-      .then(response => response.json())
-      .then(json => {
-        this.setState({
-          data: json.items,
-        });
-      });
-  }
   componentDidMount() {
-    this.loadData();
-    //this.props.loadData()
-  
   }
 render() {
   //console.info('Home components => props: ', this.props);
   console.log(this.state.data)
     var listdata = this.state.data.map((data,index)=>{
     return  (
-      <div key={index} class="row">
+      <div key={index} className="row">
         <div className="col-sm-4">{data.title}</div>
         <div className="col-sm-4">{data.link}</div>
         <div className="col-sm-4">{data.guid}</div>
@@ -49,7 +35,7 @@ render() {
             View React Bootstrap Docs
         </Button>
         </p>
-        <div class="row">
+        <div className="row">
         <div className="col-sm-4"><h2>title</h2></div>
         <div className="col-sm-4"><h2>link</h2></div>
         <div className="col-sm-4"><h2>guid</h2></div>
